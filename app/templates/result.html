@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% include '_navbar.html' %}
+<div class="container">
+  <h2>📊 Analytics Dashboard</h2>
+  {% for graph in graphs %}
+    <img src="/{{ graph }}" class="chart">
+  {% endfor %}
+</div>
+</body>
+</html>

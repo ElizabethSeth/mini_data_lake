@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload File</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% include '_navbar.html' %}
+<div class="container">
+  <h2>📤 Upload Data File</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" class="input">
+    <input type="submit" value="Upload" class="btn">
+  </form>
+</div>
+</body>
+</html>

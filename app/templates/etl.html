@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ETL Options</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% include '_navbar.html' %}
+<div class="container">
+  <h2>🧪 Data Cleaning & Transformation</h2>
+  <form method="POST">
+    {% for col, vals in stats.items() %}
+      <div class="card">
+        <strong>{{ col }}</strong><br>
+        Unique: {{ vals.unique }}, Nulls: {{ vals.nulls }}, Zeros: {{ vals.zeros }}<br>
+        <label><input type="checkbox" name="drop" value="{{ col }}"> Drop this column?</label>
+      </div>
+    {% endfor %}
+    <input type="submit" value="Apply Drops" class="btn">
+  </form>
+  <div class="btn-group">
+    <a href="/analytics" class="btn">📈 Go to Analytics</a>
+  </div>
+</div>
+</body>
+</html>

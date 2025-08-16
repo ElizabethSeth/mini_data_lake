@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preview</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% include '_navbar.html' %}
+<div class="container">
+  <h2>📊 Data Preview</h2>
+  <p><strong>Rows:</strong> {{ rows }} | <strong>Columns:</strong> {{ cols }}</p>
+  <div class="scroll-table">
+    {{ table|safe }}
+  </div>
+  <div class="btn-group">
+    <a href="/etl" class="btn">🔄 Proceed to ETL</a>
+    <a href="/save/parquet" class="btn">💾 Save as Parquet</a>
+    <a href="/save/duckdb" class="btn">🦆 Save as DuckDB</a>
+  </div>
+</div>
+</body>
+</html>

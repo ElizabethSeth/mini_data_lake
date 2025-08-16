@@ -1,0 +1,9 @@
+# requirements.txt
+Flask
+pandas
+openpyxl
+pyarrow
+duckdb
+matplotlib
+seaborn
+streamlit
