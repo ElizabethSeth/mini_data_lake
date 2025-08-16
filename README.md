@@ -17,6 +17,9 @@ Optional SQL on the in-memory DataFrame via DuckDB
 
 Dockerized
 Schema project
+
+
+
 ├── app/
 │   ├── logic/
 │   │   ├── __init__.py
